@@ -1,1 +1,16 @@
 
+1.启动tracker
+python bttrack.py --port 6969 --dfile dstate
+2.制作种子
+3.发布（批量）
+python btlaunchmany.py --data_dir /storage/p2pServer/p2pdir/store/ --torrent_dir /storage/p2pServer/p2pdir/store/
+4.编译并执行
+cd src && make
+./p2pServer &
+
+版本升级计划：
+1.线程中禁止使用sleep，改用select(0, NULL, NULL, NULL, &val)。
+2.线程中调用system或fork容易出现问题，而应改为在单进程中调用system或fork的方式。
+3.分别把调用webservice接口transfer或cut发来的请求数据插入到sqlite数据库中，处理过程中根据不同的标识位调用不同的处理函数。
+4.p2pServer目录下分include src bin lib conf log doc等不同的标识目录。
+5.尝试使用更加纯粹的面向对象思维来替代面向过程思维。
