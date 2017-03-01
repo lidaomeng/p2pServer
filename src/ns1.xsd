@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <schema targetNamespace="http://tempuri.org/ns1.xsd"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns1="http://tempuri.org/ns1.xsd"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <complexType name="InterfaceParameter"><!-- ns1__InterfaceParameter -->
+
+   <sequence>
+     <element name="uuid" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::uuid -->
+     <element name="ftpUserName" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::ftpUserName -->
+     <element name="ftpIP" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::ftpIp -->
+     <element name="ftpPassWord" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::ftpPassWord -->
+     <element name="ftpDirName" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::ftpDirName -->
+     <element name="torrentP2pPath" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::torrentP2pPath -->
+     <element name="packageName" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::packageName -->
+     <element name="packageSize" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::packageSize -->
+     <element name="taskType" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::taskType -->
+     <element name="transferTempPath" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::transferTempPath -->
+     <element name="transferStorePath" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::transferStorePath -->
+     <element name="transferTorrentPath" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__InterfaceParameter::transferTorrentPath -->
+   </sequence>
+  </complexType>
+  <!-- operation request element -->
+  <element name="isPackExist">
+   <complexType>
+    <sequence>
+     <element name="param" type="ns1:InterfaceParameter" minOccurs="1" maxOccurs="1"/><!-- ns1__isPackExist::param -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="isPackExistResponse">
+   <complexType>
+    <sequence>
+     <element name="ret" type="xsd:boolean" minOccurs="1" maxOccurs="1"/><!-- ns1__isPackExist::ret -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="transfer">
+   <complexType>
+    <sequence>
+     <element name="param" type="ns1:InterfaceParameter" minOccurs="1" maxOccurs="1"/><!-- ns1__transfer::param -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="transferResponse">
+   <complexType>
+    <sequence>
+     <element name="ret" type="xsd:boolean" minOccurs="1" maxOccurs="1"/><!-- ns1__transfer::ret -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="cutPackage">
+   <complexType>
+    <sequence>
+     <element name="param" type="ns1:InterfaceParameter" minOccurs="1" maxOccurs="1"/><!-- ns1__cutPackage::param -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="cutPackageResponse">
+   <complexType>
+    <sequence>
+     <element name="ret" type="xsd:boolean" minOccurs="1" maxOccurs="1"/><!-- ns1__cutPackage::ret -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="getUsableSpace">
+   <complexType>
+    <sequence>
+     <element name="param" type="ns1:InterfaceParameter" minOccurs="1" maxOccurs="1"/><!-- ns1__getUsableSpace::param -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="getUsableSpaceResponse">
+   <complexType>
+    <sequence>
+     <element name="ret" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1__getUsableSpace::ret -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="deletePackage">
+   <complexType>
+    <sequence>
+     <element name="param" type="ns1:InterfaceParameter" minOccurs="1" maxOccurs="1"/><!-- ns1__deletePackage::param -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="deletePackageResponse">
+   <complexType>
+    <sequence>
+     <element name="ret" type="xsd:boolean" minOccurs="1" maxOccurs="1"/><!-- ns1__deletePackage::ret -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="getTempPackage">
+   <complexType>
+    <sequence>
+     <element name="param" type="ns1:InterfaceParameter" minOccurs="1" maxOccurs="1"/><!-- ns1__getTempPackage::param -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="getTempPackageResponse">
+   <complexType>
+    <sequence>
+     <element name="ret" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/><!-- ns1__getTempPackage::ret -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="maketo">
+   <complexType>
+    <sequence>
+     <element name="param" type="ns1:InterfaceParameter" minOccurs="1" maxOccurs="1"/><!-- ns1__maketo::param -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="maketoResponse">
+   <complexType>
+    <sequence>
+     <element name="ret" type="xsd:boolean" minOccurs="1" maxOccurs="1"/><!-- ns1__maketo::ret -->
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+
